@@ -3,7 +3,12 @@
     "pages/index/index",
     "pages/hupu/hupustreet",
     "pages/vmovie/movies",
-    "pages/identity/identifyface"
+    "pages/identity/identifyface",
+    "pages/dish/dish",
+    "pages/car/car",
+    "pages/plant/plant",
+    "pages/flower/flower",
+    "pages/faceticker/faceticker"
   ],
   "window": {
     "backgroundTextStyle": "light",

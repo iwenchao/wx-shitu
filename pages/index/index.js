@@ -1,13 +1,46 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
+
 
 Page({
   data: {
     motto: '你好 小马哥',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    routers:[
+      {
+        id:'0',
+        name:"菜品识别",
+        url:'../dish/dish',
+        icon:'../../image/dishNine.png'
+      },
+      {
+        id: '1',
+        name: "车型识别",
+        url: '../car/car',
+        icon: '../../image/carNine.png'
+      },
+      {
+        id: '2',
+        name: "植物识别",
+        url: '../plant/plant',
+        icon: '../../image/plantNine.png'
+      },
+      {
+        id: '3',
+        name: "花卉识别",
+        url: '../flower/flower',
+        icon: '../../image/flower.png'
+      },
+      {
+        id: '4',
+        name: "大头贴",
+        url: '../faceticker/faceticker',
+        icon: '../../image/facesticker.png'
+      }
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
