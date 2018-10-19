@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/hupu/hupustreet",
+    "pages/vmovie/movies",
+    "pages/identity/identifyface"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小马过河",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#4169e1",
+    "borderStyle": "#99fffafa",
+    "list": [
+      {
+        "pagePath": "pages/hupu/hupustreet",
+        "text": "虎扑",
+        "iconPath": "image/hupu_street.png",
+        "selectedIconPath": "image/select_hupu_street.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "识图",
+        "iconPath": "image/icon_identify.png",
+        "selectedIconPath": "image/select_icon_identify.png"
+      },
+      {
+        "pagePath": "pages/vmovie/movies",
+        "text": "V电影",
+        "iconPath": "image/vmovie.png",
+        "selectedIconPath": "image/select_vmovie.png"
+      }
+    ]
+  }
+}
