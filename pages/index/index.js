@@ -48,6 +48,50 @@ Page({
       url: '../identity/identifyface'
     })
   },
+ 
+ //跳转到识别功能的具体页面
+  gotoPage:function(event){
+    console.info(event.currentTarget.id);
+    let route = event.currentTarget.id;
+    switch(route){
+        case 0:
+          wx.navigateTo({
+            url: '/page/dish/dish',
+          });
+        break;
+        case 1:
+        wx.navigateTo({
+          url: '/page/dish/dish',
+        });
+        break;
+      case 2:
+        wx.navigateTo({
+          url: '/page/dish/dish',
+        });
+        break;
+      case 3:
+        wx.navigateTo({
+          url: '/page/dish/dish',
+        });
+        break;
+      case 4:
+        wx.navigateTo({
+          url: '/page/dish/dish',
+        });
+        break;
+      default:
+        wx.showModal({
+          title: '温馨提示',
+          content: '功能暂未开放，以后可能也不会开放',
+          showCancel:false,
+          confirmText:'知道了',
+        })
+        break;
+    }
+
+
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
