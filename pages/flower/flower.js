@@ -1,4 +1,8 @@
 // pages/flower/flower.js
+var app = getApp();
+var api = require('../../utils/api.js');
+var flowerUrl = api.getFlowerUrl();
+
 Page({
 
   /**

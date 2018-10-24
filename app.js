@@ -22,7 +22,6 @@ App({
 
     //静默操作  获取用户信息，调用wx.login
     var that = this;
-
     // 登录
     wx.login({
       success: res => {
@@ -31,7 +30,8 @@ App({
         if(code != null){
           wx.getUserInfo({
             success:function(result){
-              console.log('user info result ===' + result);
+              console.log('user info result ===' + JSON.stringify(result));
+              console.log('oauthUrl:' + oauthUrl);
               wx.request({
                 url: oauthUrl,
                 method:'post',
@@ -39,14 +39,16 @@ App({
                   'content-type':'application/x-www-form-urlencoded'
                 },
                 data:{
-                  encryptedDta:result.encryptedData,
+                  encryptedData: result.encryptedData,
                   iv:result.iv,
                   code:code
                 },
                 success:function(res){
+                  console.log('success:' + res);
                   that.globalData.userInfo = res.data;
                 },
                 fail:function(res){
+                  console.log('fail:' + JSON.stringify(res));
                   var res = "";
                   that.globalData.userInfoBackup = res;
                 }
@@ -95,6 +97,7 @@ App({
     //     }
     //   }
     // })
+
   },
   getUserInfo:function(callback){
     var that = this;
