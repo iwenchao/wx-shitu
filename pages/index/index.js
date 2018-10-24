@@ -54,29 +54,29 @@ Page({
     console.info(event.currentTarget.id);
     let route = event.currentTarget.id;
     switch(route){
-        case 0:
+        case '0':
           wx.navigateTo({
-            url: '/page/dish/dish',
+            url: "/pages/dish/dish",
           });
         break;
-        case 1:
+        case '1':
         wx.navigateTo({
-          url: '/page/dish/dish',
+          url: '/pages/car/car',
         });
         break;
-      case 2:
+      case '2':
         wx.navigateTo({
-          url: '/page/dish/dish',
+          url: '/pages/plant/plant',
         });
         break;
-      case 3:
+      case '3':
         wx.navigateTo({
-          url: '/page/dish/dish',
+          url: '/pages/flower/flower',
         });
         break;
-      case 4:
+      case '4':
         wx.navigateTo({
-          url: '/page/dish/dish',
+          url: '/pages/faceticker/faceticker',
         });
         break;
       default:
@@ -121,7 +121,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
+    console.log("index.js   "+e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
