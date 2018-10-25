@@ -8,7 +8,8 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+        "newFeature": true,
+        "uglifyFileName":false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
@@ -16,7 +17,10 @@
 	"projectname": "%E5%B0%8F%E9%A9%AC%E8%BF%87%E6%B2%B3",
 	"debugOptions": {
 		"hidedInDevtools": []
-	},
+    },
+    "scripts":{
+
+    },
 	"isGameTourist": false,
 	"condition": {
 		"search": {

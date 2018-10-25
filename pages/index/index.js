@@ -121,7 +121,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log("index.js   "+e)
+    console.log("index.js   "+JSON.stringify(e));
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
