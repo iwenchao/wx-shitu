@@ -14,7 +14,7 @@ App({
     },
 
     //小程序启动后
-    onLaunch: function () {
+    onLaunch: function (options) {
         // 展示本地存储能力
         var logs = wx.getStorageSync('logs') || []
         logs.unshift(Date.now())
@@ -96,6 +96,19 @@ App({
         // })
 
     },
+    onShow:function(options){
+
+    },
+    onHide:function(){
+
+    },
+    onError:function(errorMsg){
+
+    },
+    onPageNotFound:function(){
+
+    },
+
     getUserInfo: function (callback) {
         var that = this;
         if (this.globalData.userInfo) {
