@@ -55,7 +55,7 @@ Page({
 
     upload: function () {
         console.log("点击上传文件");
-        let that = this;
+        var that = this;
         wx.chooseImage({
             count: 1,
             sizeType: ["compressed"],
@@ -83,21 +83,21 @@ Page({
                             wx.hideLoading();
                             let data = res.data;
                             let plantBean = JSON.parse(data);
-                            if(plantBean.code == '0'){
+                            if (plantBean.code == '0') {
                                 that.setData({
-                                    icrName:plantBean.icrName,
-                                    score:plantBean.score,
-                                    baikeUrl:plantBean.baikeUrl,
-                                    imageUrl:plantBean.imageUrl,
-                                    description:plantBean.description
+                                    icrName: plantBean.icrName,
+                                    score: plantBean.score,
+                                    baikeUrl: plantBean.baikeUrl,
+                                    imageUrl: plantBean.imageUrl,
+                                    description: plantBean.description
                                 })
-                            }else if(plantBean.code == "1"){
+                            } else if (plantBean.code == "1") {
                                 that.setData({
-                                    info:plantBean.msg
+                                    info: plantBean.msg
                                 })
-                            }else{
+                            } else {
                                 that.setData({
-                                    info:"Sorry, 不能为所欲为了"
+                                    info: "Sorry, 不能为所欲为了"
                                 })
                             }
 
@@ -105,14 +105,19 @@ Page({
                     })
 
             },
-            fail:function(res){
+            fail: function (res) {
                 wx.hideLoading();
-                console.log(res);
-                that.setData({
-                    info:"Sorry, 不能为所欲为了"
-                })
+                if (res.errMsg == "chooseImage:fail cancel") {
+                    that.setData({
+                        info: "请先选取图片"
+                    })
+                } else {
+                    that.setData({
+                        info: "Sorry, 不能为所欲为了"
+                    })
+                }
             },
-        
+
         })
     },
 

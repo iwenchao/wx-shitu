@@ -1,7 +1,7 @@
 <!-- pages/flower/flower.wxml -->
 <view class="container">
-    <view class="image_wrap">
-        <iamge src="{{img}}" mode="aspectFit" />
+    <view class="image-wrap">
+        <image src="{{ img }}" mode="aspectFit" ></image>
     </view>
     <button bind:tap="upload" class="up">拍照/选取图片识别</button>
     <text class="user-names" wx:if="{{icrName}}">植物名称：{{icrName}}</text>
