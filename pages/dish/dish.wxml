@@ -1,2 +1,28 @@
 <!--pages/dish/dish.wxml-->
-<text>pages/dish/dish.wxml</text>
+<view class="container">
+    <view class="image-wrapper">
+        <image src="{{imageUrl}}"  mode="aspectFit"/>
+    </view>
+    <button class="upload-btn"  bindtap="upload">拍照/选取图片识别</button>
+    
+    <text class="dish-error" wx:if="{{errInfo}}">错误提示：{{errInfo}}</text>
+    
+    <text class="dish-name" wx:if="{{dishName}}">菜品名称：{{dishName}}</text>
+    <text class="dish-calories" wx:if="{{calorie}}">卡路里含量：{{calorie}}</text>
+    <text class="dish-probability" wx:if="{{probability}}">可信度：{{probability}}</text>
+    <view class="baikeinfo" wx:if="{{description}}">
+        <view >
+            <view class="baikecard">
+                <text style="font-size:36rpx;margin:14rpx 0rpx;color:#3a3a3a" wx:if="{{description}}">
+                    {{dishName}}
+                </text>
+                <text class="baikecontent" wx:if="{{description}}">{{description}}</text>
+                <view class="bakeform">
+                    <text wx:if="{{description}}">来源：NBA官方合作伙伴</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+</view>

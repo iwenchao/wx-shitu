@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/dish/dish",
     "pages/index/index",
     "pages/hupu/hupustreet",
     "pages/vmovie/movies",
     "pages/identity/identifyface",
-    "pages/dish/dish",
+    
     "pages/car/car",
     "pages/plant/plant",
     "pages/faceticker/faceticker"
