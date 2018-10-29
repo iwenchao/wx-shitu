@@ -85,7 +85,7 @@ Page({
                             if (result.code == "0") {
                                 that.setData({
                                     dishName:result.dishName,
-                                    calore:result.calore,
+                                    calorie:result.calorie,
                                     probability:result.probability,
                                     description:result.description
                                 })
