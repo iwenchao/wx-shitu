@@ -1,25 +1,20 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view class="userinfo">
-    <button 
-      wx:if="{{!hasUserInfo && canIUse}}" 
-      open-type="getUserInfo" 
-      bindgetuserinfo="getUserInfo">
-       获取头像昵称 
-    </button>
-    <block wx:else>
-        <view class="grid-container">
-          <view class="weui-grid-item" wx:for="{{routers}}" wx:key="name">
-            <navigator hover-class="other-navigator-hover" open-type="navigate" bindtap="gotoPage" id="{{item.id}}">
-              <view class="weui-grid-icon">
-                <image src="{{item.icon}}" mode="scaleToFill"></image>
-                <text class="weui-grid-label">{{item.name}}</text>
-              </view>
-            </navigator>
-           </view>
-        </view>
-
-    </block>
-  </view>
-  
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            获取头像昵称
+        </button>
+        <block wx:else>
+            <view class="grid-container">
+                <view class="weui-grid-item" wx:for="{{routers}}" wx:key="name">
+                    <navigator hover-class="other-navigator-hover" open-type="navigate" bindtap="gotoPage" id="{{item.id}}">
+                        <view class="weui-grid-icon">
+                            <image src="{{item.icon}}" mode="scaleToFill"></image>
+                            <text class="weui-grid-label">{{item.name}}</text>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </block>
+    </view>
 </view>

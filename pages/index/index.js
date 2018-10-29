@@ -29,12 +29,6 @@ Page({
             },
             {
                 id: '3',
-                name: "花卉识别",
-                url: '../flower/flower',
-                icon: '../../image/flower.png'
-            },
-            {
-                id: '4',
                 name: "大头贴",
                 url: '../faceticker/faceticker',
                 icon: '../../image/facesticker.png'
@@ -63,11 +57,6 @@ Page({
                 });
                 break;
             case '3':
-                wx.navigateTo({
-                    url: '/pages/flower/flower',
-                });
-                break;
-            case '4':
                 wx.navigateTo({
                     url: '/pages/faceticker/faceticker',
                 });

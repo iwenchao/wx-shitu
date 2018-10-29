@@ -1,4 +1,8 @@
 /**index.wxss**/
+.container {
+    margin-top: 110px;
+  }
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -21,11 +25,7 @@
 }
 
 .grid-container{
-  margin-top: -100px;
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: bottom;
-  background-position-x: right;
+  margin-top: -200px;
 }
 
 .weui-grid-item{
