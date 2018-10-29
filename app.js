@@ -10,6 +10,7 @@ App({
         userInfoBackup: {},//后台得到的微信用户信息
         hasUserInfo: false,
         openId: "",
+        nickName:"",
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
 

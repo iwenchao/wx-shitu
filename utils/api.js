@@ -17,9 +17,13 @@ const flowerUrl = host + "/rest/icr/detect?clientType=" + clientType + '&apiType
 function getFlowerUrl() {
   return flowerUrl;
 }
-
-
+//植物识别url
+const plantUrl = host + '/rest/icr/detect?clientType=' + clientType + '&apiType=plant&authCode=' + authCode;
+function getPlantUrl(){
+    return plantUrl;
+}
 
 /**对外暴露的常量函数 */
 module.exports.getOauthUrl = getOauthUrl;
 module.exports.getFlowerUrl = getFlowerUrl;
+module.exports.getPlantUrl = getPlantUrl;

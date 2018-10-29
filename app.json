@@ -7,7 +7,6 @@
     "pages/dish/dish",
     "pages/car/car",
     "pages/plant/plant",
-    "pages/flower/flower",
     "pages/faceticker/faceticker"
   ],
   "window": {
