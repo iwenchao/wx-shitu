@@ -1,2 +1,27 @@
 <!--pages/car/car.wxml-->
-<text>pages/car/car.wxml</text>
+<view class="container">
+    <view class="img-wrapper">
+        <image src="{{imageUrl}}" mode="aspectFit" />
+    </view>
+    <button class="btn-upload" bind:tap="upload">拍照/选取图片识别</button>
+    <text class="err-info" wx:if="{{errInfo}}">错误提示：{{errInfo}}</text>
+    <text class="car" wx:if="{{carName}}">车型名称：{{carName}}</text>
+    <text class="car" wx:if="{{carYear}}">车型年份：{{carYear}}</text>
+    <text class="car" wx:if="{{carColor}}">车型颜色：{{carColor}}</text>
+    <text class="car" wx:if="{{carProbability}}">车型可信度：{{carProbability}}</text>
+
+    <view class="baikeinfo" wx:if="{{description}}">
+        <view >
+            <view class="baike-card">
+                <text style="font-size:36rpx;margin:14rpx 0rpx;color:#3a3a3a" wx:if="{{description}}">
+                    {{carName}}
+                </text>
+                <text class="baike-content" wx:if="{{description}}">{{description}}</text>
+                <view class="support">
+                    <text wx:if="{{description}}">来源：NBA官方合作伙伴</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>

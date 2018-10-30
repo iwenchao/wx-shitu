@@ -28,6 +28,12 @@ function getDishUrl() {
     return dishUrl;
 }
 
+//车型识别url
+const carurl = host + '/rest/icr/detect?clientType=' + clientType + '&apiType=car&authCode=' + authCode;
+function getCarUrl() {
+    return carurl;
+}
+
 
 
 
@@ -36,3 +42,4 @@ module.exports.getOauthUrl = getOauthUrl;
 module.exports.getFlowerUrl = getFlowerUrl;
 module.exports.getPlantUrl = getPlantUrl;
 module.exports.getDishUrl = getDishUrl;
+module.exports.getCarUrl = getCarUrl;
