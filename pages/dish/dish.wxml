@@ -17,7 +17,7 @@
                     {{dishName}}
                 </text>
                 <text class="baikecontent" wx:if="{{description}}">{{description}}</text>
-                <view class="bakeform">
+                <view class="baikeform">
                     <text wx:if="{{description}}">来源：NBA官方合作伙伴</text>
                 </view>
             </view>

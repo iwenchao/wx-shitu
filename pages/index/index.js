@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp();
+var constant = require('../../utils/constant.js')
 
 
 Page({
@@ -10,25 +11,37 @@ Page({
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         routers: [
             {
-                id: '0',
+                id: constant.page_dish,
                 name: "菜品识别",
                 url: '../dish/dish',
                 icon: '../../image/dishNine.png'
             },
             {
-                id: '1',
+                id: constant.page_car,
                 name: "车型识别",
                 url: '../car/car',
                 icon: '../../image/carNine.png'
             },
             {
-                id: '2',
+                id: constant.page_plant,
                 name: "植物识别",
                 url: '../plant/plant',
                 icon: '../../image/plantNine.png'
             },
             {
-                id: '3',
+                id: constant.page_animal,
+                name: "动物识别",
+                url: '../animal/animal',
+                icon: '../../image/animalNine.png'
+            },
+            {
+                id: constant.page_logo,
+                name: "品牌识别",
+                url: '../logo/logo',
+                icon: '../../image/tag.png'
+            },
+            {
+                id: constant.page_facesticker,
                 name: "大头贴",
                 url: '../faceticker/faceticker',
                 icon: '../../image/facesticker.png'
@@ -41,25 +54,25 @@ Page({
         console.info(event.currentTarget.id);
         let route = event.currentTarget.id;
         switch (route) {
-            case '0':
-                wx.navigateTo({
-                    url: "/pages/dish/dish",
-                });
+            case constant.page_dish:
+                this.navigateToPage("/pages/dish/dish");
                 break;
-            case '1':
-                wx.navigateTo({
-                    url: '/pages/car/car',
-                });
+            case constant.page_car:
+                this.navigateToPage("/pages/car/car");
                 break;
-            case '2':
-                wx.navigateTo({
-                    url: '/pages/plant/plant',
-                });
+            case constant.page_plant:
+                this.navigateToPage("/pages/plant/plant");
                 break;
-            case '3':
-                wx.navigateTo({
-                    url: '/pages/faceticker/faceticker',
-                });
+
+            case constant.page_animal:
+                this.navigateToPage("/pages/animal/animal");
+                break;
+
+            case constant.page_logo:
+                this.navigateToPage("/pages/logo/logo");
+                break;
+            case constant.page_facesticker:
+                this.navigateToPage("/pages/faceticker/faceticker");
                 break;
             default:
                 wx.showModal({
@@ -70,9 +83,15 @@ Page({
                 })
                 break;
         }
-
-
     },
+
+
+    navigateToPage: function (page) {
+        wx.navigateTo({
+            url: page,
+        });
+    },
+
     //生命周期回调—监听页面加载
     onLoad: function () {
         if (app.globalData.userInfo) {

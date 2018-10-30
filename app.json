@@ -1,13 +1,16 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/hupu/hupustreet",
-    "pages/vmovie/movies",
-    "pages/identity/identifyface",
+    
     "pages/dish/dish",
     "pages/car/car",
     "pages/plant/plant",
-    "pages/faceticker/faceticker"
+    "pages/faceticker/faceticker",
+    "pages/animal/animal",
+    "pages/logo/logo",
+
+    "pages/hupu/hupustreet",
+    "pages/vmovie/movies"
   ],
   "window": {
     "backgroundTextStyle": "light",
