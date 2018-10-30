@@ -1,7 +1,7 @@
 // pages/car/car.js
 const api = require('../../utils/api.js');
 const carUrl = api.getCarUrl();
-
+const app = getApp();
 
 
 Page({
@@ -14,6 +14,7 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         //识别数据
+        imageUrl:"",
         carName: "",
         carYear: "",
         carColor: "",
@@ -83,7 +84,9 @@ Page({
                             if (carBean.code == '0') {
                                 that.setData({
                                     carName: carBean.icrName,
-                                    score: carBean.score,
+                                    carYear:carBean.year,
+                                    carColor:carBean.colorResult,
+                                    carProbability: carBean.score,
                                     baikeUrl: carBean.baikeUrl,
                                     imageUrl: carBean.imageUrl,
                                     description: carBean.description

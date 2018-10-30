@@ -1,7 +1,7 @@
 // pages/dish/dish.js
 const api = require('../../utils/api.js');
 const dishUrl = api.getDishUrl();
-
+const app = getApp();
 
 Page({
 
